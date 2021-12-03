@@ -1,3 +1,4 @@
+@font-face {font-family: 'D-DIN'; font-display: swap; src: local('D-DIN'), url('./fonts/D-DIN.otf');}
 
 body {
 	font-size: 0;
@@ -8,4 +9,45 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+header {
+	text-align: center;
+}
+
+header .logo_img img {
+	height: 47px;
+}
+
+header .bottom_slogan {
+	font-size: 16px;
+	font-family: 'D-Din', sans-serif;
+	margin-top: 20px;
+	position: relative;
+}
+
+header .bottom_slogan::before {
+	content: '';
+	background-image: url('./img/logo_leftDec.png');
+	background-position: right;
+    background-repeat: no-repeat;
+    width: calc((100% - 165px) / 2);
+    max-width: 42%;
+    height: 9px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+header .bottom_slogan::after {
+	content: '';
+	background-image: url('./img/logo_rightDec.png');
+	background-position: left;
+    background-repeat: no-repeat;
+    width: calc((100% - 165px) / 2);
+    max-width: 42%;
+    height: 9px;
+    position: absolute;
+    right: 0;
+    top: 4px;
 }
